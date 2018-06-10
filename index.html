@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="github-markdown.css">
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body onload="run()">
+        <nav>
+            <button>Editor</button>
+            <button>Split</button>
+            <button>Preview</button>
+            <select>
+                <option>GitHub</option>
+                <option>npm</option>
+            </select>
+        </nav>
+        <div class="fake-nav"></div>
+        <section class="editor hidden">
+                <textarea id="sourceTA" onkeyup="run();"></textarea>
+        </section>
+        <section class="preview">
+            <div id="targetDiv" class="markdown-body"></div>
+        </section>
+        <script src="sampleText.js"></script>
+        <script src="main.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    </body>
+</html>
