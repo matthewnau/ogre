@@ -3,25 +3,41 @@
     <head>
         <link rel="stylesheet" href="github-markdown.css">
         <link rel="stylesheet" href="main.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <script async defer src="https://buttons.github.io/buttons.js"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     </head>
     <body onload="run()">
-        <nav>
-            <button>Editor</button>
-            <button>Split</button>
-            <button>Preview</button>
-            <select>
-                <option>GitHub</option>
-                <option>npm</option>
-            </select>
-        </nav>
-        <div class="fake-nav"></div>
-        <section class="editor hidden">
-                <textarea id="sourceTA" onkeyup="run();"></textarea>
-        </section>
-        <section class="preview">
-            <div id="targetDiv" class="markdown-body"></div>
-        </section>
-        <script src="sampleText.js"></script>
+        <h1 class="title">Ogre</h1>
+        <h4 class="subtitle">Online GitHub ReadMe Editor</h4>
+        <div class="github-buttons">
+            <a class="github-button" href="https://github.com/matthewnau/ogre" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star matthewnau/libmoji on GitHub">Star</a>
+            <a class="github-button" href="https://github.com/matthewnau/ogre/subscription" data-icon="octicon-eye" data-size="large" data-show-count="true" aria-label="Watch matthewnau/ogre on GitHub">Watch</a>
+        </div>
+        <div id="targetDiv" class="markdown-body"></div>
+        <div class="editor-wrapper hidden">
+            <textarea># Ogre
+                    Ogre is a markdown editor meant for providing you an experience similar to GitHub. When creating readme files, I would always be upset that no markdown editor that I could find online looked how GitHub did. I wanted to know how my readme files would look on GitHub, before I uploaded them! This led me to creating Ogre.
+                    
+                    Ogre makes it easy for you to edit any markdown files, and then preview it exactly as it would look on GitHub! Thanks to open source tools such as [GitHub Markdown CSS](https://github.com/sindresorhus/github-markdown-css), and [Marked](https://github.com/markedjs/marked), I was able to design an open-source editor of my own, with a preview system identical to GitHub's.
+                    
+                    Ogre works with any standard markdown syntax and makes it easy to edit files! More features will be coming in the future that includes a full editor with formatting buttons, line numbers, and importing and exporting abilities! Stay tuned for exciting features. To begin editing, click the pencil icon in the bottom right corner of the screen!
+                    
+                    <p align="center">
+                    <img height="400px" src="screenshot-2.png"/>
+                    </p>
+                    
+                    ---
+                    
+                    ## Product disclaimer
+                    
+                    This code is in no way affiliated with, authorized, maintained, sponsored or endorsed by GitHub or any of its affiliates or subsidiaries. This is an independent and unofficial product. Use at your own risk.
+            </textarea>
+        </div>
+        <button class="edit">
+            <i class="fas fa-pencil-alt fa-2x editButton"></i>
+            <i class="fas fa-eye fa-2x previewButton hidden"></i>
+        </button>
         <script src="main.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     </body>

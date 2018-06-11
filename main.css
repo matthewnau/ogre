@@ -2,23 +2,31 @@ html, body {
     width: 100vw;
     height: auto;
     margin: 0;
+    background: #4776E6;
+    background: -webkit-linear-gradient(to right, #8E54E9, #4776E6);
+    background: linear-gradient(to right, #8E54E9, #4776E6);
+    background-repeat: repeat;
+                                                                                
     display: flex;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 .markdown-body {
     box-sizing: border-box;
-    margin: 0 auto;
+    margin: 45px;
+    margin-top: 0;
     padding: 45px;
     min-width: 200px;
     max-width: 980px;
     border: 1px solid rgb(221, 221, 221);
-    border-radius: 3px;
+    border-radius: 13px;
     background-color: #ffffff;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 
 @media (max-width: 767px) {
-    .markdown-body {
+    .markdown-body, .editor-wrapper {
         padding: 15px;
     }
 }
@@ -26,37 +34,86 @@ html, body {
 textarea {
     box-sizing: border-box;
     width: 100%;
-    height: auto;
-    min-width: 200px;
-    max-width: 980px;
-    border: 1px solid rgb(221, 221, 221);
-    border-radius: 3px;
+    border: none;
+    border-top: 1px solid rgb(221, 221, 221);
+    border-bottom: 1px solid rgb(221, 221, 221);
+    border-left: 1px solid rgb(221, 221, 221);
+    border-right: 1px solid rgb(221, 221, 221);
     resize: none;
-    height: 500px;
+    height: 420px;
+    margin: 0;color: #24292e;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 16px;
+    line-height: 1.5;
+    word-wrap: break-word;
 }
-
-section {
-    width: 100%;
-    height: auto;
-    box-sizing: border-box;
-    padding: 45px;
-}
-
 .hidden {
-    display: none;
+    display: none !important;
 }
-
-nav {
+.editor-wrapper {
+    height: auto;
+    padding: 45px;
+    min-width: 200px;
     width: 100%;
-    height: 40px;
-    background-color: rgb(218, 218, 218);
+    max-width: 980px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    border-radius: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid rgb(221, 221, 221);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+.edit {
     position: fixed;
+    right: 0;
+    bottom: 0;
+    margin: 25px;
+    z-index: 1;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: none;
+    background-color: #ffffff;
+    box-shadow: rgba(60, 64, 67, 0.08) 0px 1px 1px 0px, rgba(60, 64, 67, 0.16) 0px 1px 3px 1px;
+    transition: box-shadow 135ms cubic-bezier(.4,0,.2,1),width 235ms cubic-bezier(.4,0,.2,1);
+    cursor: pointer;
+    padding: 0;
+}
+.edit:hover {
+    box-shadow: 0 1px 3px 1px rgba(60,64,67,.2),0 2px 8px 4px rgba(60,64,67,.1);
+    background-color: #F5F5F5;
+}
+.edit:active {
+    color: black;
+}
+.title, .subtitle {
+    color: #fff;
+}
+.title {
+    font-size: 60px;
+    font-family: 'Roboto', serif;
+    margin-bottom: 0;
+    margin-top: 40px;
+}
+.subtitle {
+    font-size: 24px;
+    font-family: 'Roboto', serif;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+iframe {
+    margin: 0 5px;
+}
+.github-buttons {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
-}
-.fake-nav {
-    width: 100%;
-    height: 40px;
+    margin-bottom: 40px;
 }
